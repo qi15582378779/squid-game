@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'iconfont';  /* Project id 2423951 */
+    src: url('//at.alicdn.com/t/font_2423951_yju94qod2mo.woff2?t=1624437637920') format('woff2'),
+    url('//at.alicdn.com/t/font_2423951_yju94qod2mo.woff?t=1624437637920') format('woff'),
+    url('//at.alicdn.com/t/font_2423951_yju94qod2mo.ttf?t=1624437637920') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../font/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'BM';
+    src: url("../font/bm.otf");
+}
+
+
+html, body {
+    width: 100%;
+    height: auto !important;
+    font-family: BM;
+    font-size: 16px;
+    font-style: normal;
+    background-color: #171E25;
+    touch-action: pan-y;
+    overflow: auto !important;
+}
+
+a,
+a:active,
+a:focus,
+a:hover,
+a:visited {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p,
+h3 {
+    margin: 0;
+}
+
+button {
+    outline: none;
+}
+
+._container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+$top1: 100px;
+@keyframes tranTop {
+    0% {
+        transform: translateY($top1);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1200px) {
+    ._container {
+        width: 100%;
+        //padding: 0 44px;
+        padding-left: 44px !important;
+        padding-right: 44px !important;
+    }
+}
+
+
