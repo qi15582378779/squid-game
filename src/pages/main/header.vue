@@ -81,6 +81,8 @@ export default {
         justify-content: space-between;
         background: #000000;
         padding: 0 44px;
+        margin-bottom: -80px;
+        position: relative;
 
         ._hd-lf {
             display: flex;
@@ -130,7 +132,7 @@ export default {
             align-items: center;
             justify-content: space-between;
             min-width: 140px;
-            height: 32px;
+            height: 30px;
             cursor: pointer;
             font-weight: 900;
             font-size: 13px;
@@ -189,6 +191,10 @@ export default {
             top: 0;
             right: 0;
             border: 1px solid #FFFFFF;
+
+            &:hover {
+                background: #232323;
+            }
         }
 
         ._active-open {
