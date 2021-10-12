@@ -8,12 +8,12 @@
                 <div class="_sub-txt">
                     <p>{{$t('Main.Title')}}</p>
                 </div>
-                <div>
+                <div class="_h5-pd">
                     <a href="" class="_btn1">
                         <img src="../../assets/images/word1.svg" alt="">
                     </a>
                 </div>
-                <div>
+                <div class="_h5-pd">
                     <a href="" class="_btn2">
                         <img src="../../assets/images/word2.svg" alt="">
                     </a>
@@ -171,6 +171,7 @@ export default {
 
             ._main-con {
                 padding-left: 0;
+                display: block;
                 flex-wrap: wrap;
                 padding-top: 70px;
                 background-image: none;
@@ -192,10 +193,17 @@ export default {
                 }
             }
 
+            ._h5-pd {
+                padding: 0 16px;
+            }
+
             ._btn1, ._btn2 {
-                width: 308px;
+                width: 100%;
                 height: 55px;
                 margin: 0 auto;
+                img {
+                    max-width: 90%;
+                }
             }
 
             ._btn1 {
@@ -209,6 +217,9 @@ export default {
             ._icons {
                 width: 100%;
                 padding-bottom: 40px;
+                a {
+                    margin: 0 8px;
+                }
             }
         }
     }
