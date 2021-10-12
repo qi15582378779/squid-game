@@ -2,6 +2,7 @@
     <div class="_main">
         <HeaderCom/>
         <div class="_main-con">
+            <div class="_web"></div>
             <div class="_con-txt">
                 <img src="../../assets/images/img1.svg" alt="" class="_top-img">
                 <div class="_sub-txt">
@@ -60,6 +61,10 @@ export default {
 
         ._con-txt {
 
+        }
+
+        ._web {
+            display: none;
         }
 
         ._top-img {
@@ -154,7 +159,57 @@ export default {
     @media (max-width: 768px) {
         ._main {
             position: relative;
-            padding-top: 64px;
+            ._web {
+                display: block;
+                width: 100%;
+                height: 185px;
+                background-image: url("../../assets/images/bg.svg");
+                background-repeat: no-repeat;
+                background-position: center right;
+                background-size: cover;
+            }
+
+            ._main-con {
+                padding-left: 0;
+                flex-wrap: wrap;
+                padding-top: 70px;
+                background-image: none;
+            }
+
+            ._con-txt {
+                padding: 13px 18px 0;
+            }
+
+            ._top-img {
+                height: 65px;
+                margin-bottom: 28px;
+            }
+
+            ._sub-txt {
+                margin-bottom: 38px;
+                p {
+                    width: 100%;
+                }
+            }
+
+            ._btn1, ._btn2 {
+                width: 308px;
+                height: 55px;
+                margin: 0 auto;
+            }
+
+            ._btn1 {
+                margin-bottom: 28px;
+            }
+
+            ._btn2 {
+                margin-bottom: 42px;
+            }
+
+            ._icons {
+                width: 100%;
+                padding-bottom: 40px;
+            }
         }
     }
 </style>

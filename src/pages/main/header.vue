@@ -2,7 +2,7 @@
     <div class="_main-header">
         <div class="_hd-lf">
             <img src="../../assets/images/logo/logo-sub.svg" alt="">
-            <img src="../../assets/images/logo/logo-word.svg" alt="">
+            <img src="../../assets/images/logo/logo-word.svg" alt="" class="_web">
         </div>
 
         <div class="_hd-rt">
@@ -203,6 +203,22 @@ export default {
 
             ._language {
                 background: #232323;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        ._main-header {
+            height: 70px;
+            margin-bottom: -70px;
+            padding: 0 18px;
+
+            ._hd-lf img:nth-of-type(1) {
+                height: 24px;
+            }
+
+            ._web {
+                display: none;
             }
         }
     }
