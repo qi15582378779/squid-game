@@ -6,9 +6,9 @@
 
 @font-face {
     font-family: 'iconfont';  /* Project id 2423951 */
-    src: url('//at.alicdn.com/t/font_2423951_yju94qod2mo.woff2?t=1624437637920') format('woff2'),
-    url('//at.alicdn.com/t/font_2423951_yju94qod2mo.woff?t=1624437637920') format('woff'),
-    url('//at.alicdn.com/t/font_2423951_yju94qod2mo.ttf?t=1624437637920') format('truetype');
+    src: url('//at.alicdn.com/t/font_2423951_mpru31ewi5q.woff2?t=1632822069865') format('woff2'),
+    url('//at.alicdn.com/t/font_2423951_mpru31ewi5q.woff?t=1632822069865') format('woff'),
+    url('//at.alicdn.com/t/font_2423951_mpru31ewi5q.ttf?t=1632822069865') format('truetype');
 }
 
 .iconfont {
@@ -33,12 +33,12 @@
 
 html, body {
     width: 100%;
-    height: auto !important;
+    height: 100%;
     font-family: BM;
     font-size: 16px;
     font-style: normal;
-    background-color: #171E25;
-    touch-action: pan-y;
+    background-color: #060201;
+    //touch-action: pan-y;
     overflow: auto !important;
 }
 

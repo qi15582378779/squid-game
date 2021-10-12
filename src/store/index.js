@@ -7,7 +7,8 @@ export default new Vuex.Store({
     namespaced: true,
     state: {
         scrollTop: 0,
-        scrollDirection: null
+        scrollDirection: null,
+        language: localStorage.lang || 'en',
     },
     getters: {
         getScrollTop(state) {
@@ -15,7 +16,10 @@ export default new Vuex.Store({
         },
         getDirection(state) {
             return state.scrollDirection
-        }
+        },
+        language(state) {
+            return state.language;
+        },
     },
     mutations: {
         setScrollTop(state, val) {
@@ -23,6 +27,9 @@ export default new Vuex.Store({
         },
         setScrollDirection(state, val) {
             state.scrollDirection = val
-        }
+        },
+        setLanguage(state, l) {
+            state.language = l;
+        },
     }
 })

@@ -15,12 +15,13 @@ export default {
     },
     created() {
         setTimeout(() => {
-            require(['skrollr'], function (skrollr) {
-                // console.log('skrollr', skrollr)
-                skrollr.init();
-                document.getElementById('screen-loading').style.display = 'none';
-                document.getElementById('app').style.display = 'block';
-            });
+            document.getElementById('screen-loading').style.display = 'none';
+            // require(['skrollr'], function (skrollr) {
+            //     // console.log('skrollr', skrollr)
+            //     skrollr.init();
+            //     document.getElementById('screen-loading').style.display = 'none';
+            //     document.getElementById('app').style.display = 'block';
+            // });
         }, 1000)
     },
 }
@@ -30,5 +31,6 @@ export default {
     #app {
         width: 100%;
         height: 100%;
+        display: block;
     }
 </style>
