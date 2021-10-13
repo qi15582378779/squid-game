@@ -15,7 +15,7 @@ export default {
     },
     created() {
         setTimeout(() => {
-            document.getElementById('screen-loading').style.display = 'none';
+            // document.getElementById('screen-loading').style.display = 'none';
             // require(['skrollr'], function (skrollr) {
             //     // console.log('skrollr', skrollr)
             //     skrollr.init();

@@ -10,11 +10,11 @@
                 <img src="../../assets/images/word1.svg" alt="">
             </a>
 
-            <div class="_lang-con _web-lang" :class="{'_active-open': lang_show}">
+            <div class="_lang-con" :class="{'_active-open': lang_show}">
                 <div class="_language" @click="lang_show = !lang_show">
                     <div>
-                        <img src="../../assets/images/globe.svg" alt="">
-                        {{langTxt[lang]}}
+                        <!--                        <img src="../../assets/images/globe.svg" alt="">-->
+                        {{setLangTxt(lang)}}
                     </div>
                     <i class="iconfont">&#xe624;</i>
                 </div>
@@ -53,18 +53,18 @@ export default {
         return {
             lang_show: false,
             langTxt: {
-                zh: this.$t('Main.Zh'),
                 en: this.$t('Main.En'),
+                kr: this.$t('Main.Kr'),
             },
             langList: [
                 {
-                    val: 'zh',
-                    label: this.$t('Main.Zh')
-                },
-                {
                     val: 'en',
                     label: this.$t('Main.En')
-                }
+                },
+                {
+                    val: 'kr',
+                    label: this.$t('Main.Kr')
+                },
             ],
             lang: localStorage.getItem('lang') || 'en',
             langModalFlag: false
@@ -82,6 +82,9 @@ export default {
             this.$i18n.locale = e;
             localStorage.setItem('lang', e);
             this.langModalFlag = false;
+        },
+        setLangTxt(name) {
+            return name.slice(0, 1).toUpperCase() + name.slice(1);
         }
     }
 }
@@ -131,7 +134,7 @@ export default {
             background: #EA4A86;
             box-shadow: -1px 4px 9px #000000;
             transition: all .2s;
-            margin-right: 156px;
+            margin-right: 90px;
 
             &:hover {
                 background: #F95D98;
@@ -146,13 +149,9 @@ export default {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            min-width: 140px;
+            width: 74px;
             height: 30px;
             cursor: pointer;
-            font-weight: 900;
-            font-size: 13px;
-            letter-spacing: 0.035em;
-            text-transform: capitalize;
             color: #ffffff;
             padding: 0 14px 0 16px;
             position: relative;
@@ -161,6 +160,10 @@ export default {
             & > div {
                 display: flex;
                 align-items: center;
+                font-weight: 900;
+                font-size: 13px;
+                letter-spacing: 0.035em;
+                text-transform: capitalize;
 
                 img {
                     width: 16px;
@@ -174,7 +177,7 @@ export default {
         }
 
         ._lang-menu {
-            width: 100%;
+            width: 74px;
             display: flex;
             flex-wrap: wrap;
 
@@ -186,7 +189,7 @@ export default {
                 letter-spacing: 0.035em;
                 text-transform: capitalize;
                 margin-bottom: 12px;
-                padding-left: 38px;
+                padding-left: 16px;
                 transition: all .3s;
                 cursor: pointer;
 
@@ -240,16 +243,16 @@ export default {
                 display: none;
             }
 
-            ._btn1 {
-                margin-right: 18px;
-            }
+            /*._btn1 {*/
+            /*    margin-right: 18px;*/
+            /*}*/
 
-            ._web-lang {
-                display: none;
-            }
+            /*._web-lang {*/
+            /*    display: none;*/
+            /*}*/
 
             ._h5-lang {
-                display: flex;
+                display: none;
                 align-items: center;
 
                 i {

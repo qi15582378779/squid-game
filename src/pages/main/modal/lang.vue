@@ -26,13 +26,13 @@ export default {
         return {
             langList: [
                 {
-                    val: 'zh',
-                    label: this.$t('Main.Zh')
-                },
-                {
                     val: 'en',
                     label: this.$t('Main.En')
-                }
+                },
+                {
+                    val: 'kr',
+                    label: this.$t('Main.Kr')
+                },
             ],
         }
     },

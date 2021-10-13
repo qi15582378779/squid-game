@@ -81,6 +81,12 @@ export default {
                 line-height: 25px;
                 color: #ffffff;
                 text-align: justify;
+                background-image: url("../../assets/images/txt-bg2.png");
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-origin: border-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
         }
 
