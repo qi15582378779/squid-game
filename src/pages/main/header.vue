@@ -10,7 +10,7 @@
                 <img src="../../assets/images/word1.svg" alt="">
             </a>
 
-            <div class="_lang-con" :class="{'_active-open': lang_show}">
+            <div class="_lang-con _web-lang" :class="{'_active-open': lang_show}">
                 <div class="_language" @click="lang_show = !lang_show">
                     <div>
                         <img src="../../assets/images/globe.svg" alt="">
@@ -26,17 +26,27 @@
                     </div>
                 </transition>
             </div>
+
+
+            <div class="_h5-lang" @click="langModalFlag = true">
+                <img src="../../assets/images/globe.svg" alt="">
+                <i class="iconfont">&#xe624;</i>
+            </div>
         </div>
+
+        <lang-modal :visible="langModalFlag" :active="lang" @close="closeModal($event)"/>
     </div>
 </template>
 
 <script>
 import transition from '../../components/transition';
+import langModal from './modal/lang';
 
 export default {
     name: 'header-index',
     components: {
-        transition
+        transition,
+        langModal
     },
     data() {
         return {
@@ -56,18 +66,22 @@ export default {
                 }
             ],
             lang: localStorage.getItem('lang') || 'en',
+            langModalFlag: false
         }
     },
     methods: {
-        langClick() {
-            this.lang_show = true;
-        },
         command(locale) {
             this.lang = locale;
             this.$i18n.locale = locale;
             localStorage.setItem('lang', locale);
             this.lang_show = false;
         },
+        closeModal(e) {
+            this.lang = e;
+            this.$i18n.locale = e;
+            localStorage.setItem('lang', e);
+            this.langModalFlag = false;
+        }
     }
 }
 </script>
@@ -197,6 +211,10 @@ export default {
             }
         }
 
+        ._h5-lang {
+            display: none;
+        }
+
         ._active-open {
             background: #232323;
             box-shadow: -1px 4px 9px #000000;
@@ -219,6 +237,25 @@ export default {
 
             ._web {
                 display: none;
+            }
+
+            ._btn1 {
+                margin-right: 18px;
+            }
+
+            ._web-lang {
+                display: none;
+            }
+
+            ._h5-lang {
+                display: flex;
+                align-items: center;
+
+                i {
+                    color: #ffffff;
+                    font-size: 16px;
+                    margin-left: 5px;
+                }
             }
         }
     }

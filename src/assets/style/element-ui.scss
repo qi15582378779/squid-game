@@ -1,0 +1,16 @@
+
+._common-modal {
+    .el-dialog {
+        background: #232323;
+        border: 1px solid #FFFFFF;
+        box-shadow: -1px 4px 9px #000000;
+    }
+
+    .el-dialog__header {
+        padding: 0;
+    }
+
+    .el-dialog__body {
+        padding: 18px 0;
+    }
+}
