@@ -21,6 +21,7 @@
                 <transition :show="lang_show" class="_lang-menu">
                     <div v-for="(el, index) of langList"
                         :key="index"
+                        :class="{'_active': lang == el.val}"
                         @click="command(el.val)">
                         {{el.label}}
                     </div>
@@ -189,7 +190,7 @@ export default {
                 transition: all .3s;
                 cursor: pointer;
 
-                &:hover {
+                &:hover, &._active {
                     color: #F95D98;
                 }
 
